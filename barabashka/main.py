@@ -54,9 +54,13 @@
 #     "key1": 123
 #     "key2": {1: "aaaaaaaaaaaaa"}
 #     True: "ss"
-# }
+# # }
+# #
+# def aboba(x1, x2):
+#     return
+#
+# aboba(10, 2) #вызов функции с аргументами
 
-def aboba(x1, x2):
-    return
+lambda_cube = lambda y: y*y*y
 
-aboba(10, 2) #вызов функции с аргументами
+print(lambda_cube(2))
