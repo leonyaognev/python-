@@ -67,6 +67,19 @@ import json
 # data = resp.json()['iss_position']
 # print(f"долгота: {data['longitude']}, широта:{data['latitude']}")
 
+import requests
+
+sun = requests.get('https://api.sunrisesunset.io/json?lat=55.0415&lng=82.9346&timezone=UTC&date=today').json()
+print(sun)
+sunset = sun['results']['last_light']
+sunrise = sun['results']['first_light']
+sunset = sunset.split(' ')
+sunrise = sunrise.split(' ')
+timeset = sunset[0].split(':')
+timerise = sunset[0].split(':')
+print(timeset,timerise)
+print(sunrise, sunset)
+time
 
 
 
