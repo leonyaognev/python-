@@ -66,11 +66,6 @@ import json
 # resp = requests.get("http://api.open-notify.org/iss-now.json", )
 # data = resp.json()['iss_position']
 # print(f"долгота: {data['longitude']}, широта:{data['latitude']}")
-#
-#
-#
-#
-#
 
 
 
