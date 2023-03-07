@@ -48,6 +48,6 @@
 # print(s1 - s2) # разность .differnce
 # print(s1 & s2) #  пересечение .intersection
 # print(s1 ^ s2) # ассиметрическая разность .
-l = [i ** 2 for i in range(1, 6)] #list comprehension
-print(l)
-            
+# l = [i ** 2 for i in range(1, 6)] #list comprehension
+# print(l)
+#

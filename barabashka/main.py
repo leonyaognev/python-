@@ -1,17 +1,17 @@
-#x = "    Леонид    "
-# print(x.strip()) #убирает символы слева и срава, указанные в скобках
-# print(x.lstrip()) #убирает символы только слева
-# print(x.rstrip()) #убирает символы только справа
-#
-# s = "+55"
-# s1 = "-55"
-# print(s.lstrip("+-"))
-# print(s1.lstrip("+-"))
-#
-# s = "-=-=-=-=+_+_+_+-=-=-=55"
-#
-# s = s.lstrip("-+_=")
-# print(s.isdigit())
+x = "    Леонид    "
+print(x.strip()) #убирает символы слева и срава, указанные в скобках
+print(x.lstrip()) #убирает символы только слева
+print(x.rstrip()) #убирает символы только справа
+
+s = "+55"
+s1 = "-55"
+print(s.lstrip("+-"))
+print(s1.lstrip("+-"))
+
+s = "-=-=-=-=+_+_+_+-=-=-=55"
+
+s = s.lstrip("-+_=")
+print(s.isdigit())
 #
 # s = "Привет мир, я Алексей"
 # print(s.split()) #разделяет по определенным знакам
@@ -60,7 +60,7 @@
 #     return
 #
 # aboba(10, 2) #вызов функции с аргументами
-
-lambda_cube = lambda y: y*y*y
-
-print(lambda_cube(2))
+#
+# lambda_cube = lambda y: y*y*y
+#
+# print(lambda_cube(2))

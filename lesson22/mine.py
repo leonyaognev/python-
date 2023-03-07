@@ -67,19 +67,64 @@ import json
 # data = resp.json()['iss_position']
 # print(f"долгота: {data['longitude']}, широта:{data['latitude']}")
 
+#ыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыы
 import requests
+import datetime
 
 sun = requests.get('https://api.sunrisesunset.io/json?lat=55.0415&lng=82.9346&timezone=UTC&date=today').json()
-print(sun)
+
 sunset = sun['results']['last_light']
 sunrise = sun['results']['first_light']
 sunset = sunset.split(' ')
 sunrise = sunrise.split(' ')
 timeset = sunset[0].split(':')
-timerise = sunset[0].split(':')
-print(timeset,timerise)
-print(sunrise, sunset)
-time
+timerise = sunrise[0].split(':')
+
+
+for a, b in enumerate(timeset):
+    timeset[a] = int(b)
+for a, b in enumerate(timerise):
+    timerise[a] = int(b)
+
+if sunset[1] == 'PM':
+    timeset[0] += 12
+    timeset[0] += 7
+    timeset[0] %= 24
+
+if sunrise[1] == 'PM':
+    timerise[0] += 12
+    timerise[0] += 7
+    timerise[0] %= 24
+
+x = ''
+x1 = ''
+
+for a, b in enumerate(timeset):
+    timeset[a] = str(b)
+for a, b in enumerate(timerise):
+    timerise[a] = str(b)
+
+for r, i in enumerate(timeset):
+    if int(i) // 10 == 0:
+        x += f'0{timeset[r]}'
+    else:
+        x += timeset[r]
+
+for r, i in enumerate(timerise):
+    if int(i) // 10 == 0:
+        x1 += f'0{timerise[r]}'
+    else:
+        x1 += timerise[r]
+
+time = datetime.datetime.now()
+time = str(time.time()).rstrip('1234567890').rstrip('.').replace(':', '')
+
+
+if int(time) > int(x1) and int(time) < int(x):
+    print('сейчас на улице светло')
+else:
+    print('я устал, там темно, иди спать')
+
 
 
 
