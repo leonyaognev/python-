@@ -167,12 +167,16 @@ class Coffe:
     def latte(self):
         self.money, self.milk, self.water, self.coffe = self.money - 50, self.milk - 150, self.water - 200, self.coffe - 24
     def espresso(self):
-        self.money, self.milk, self.water, self.coffe = self.money - 35, self.milk - 0, self.whoter - 50, self.coffe - 18
+        self.money, self.milk, self.water, self.coffe = self.money - 35, self.milk - 0, self.water - 50, self.coffe - 18
     def cappuccino(self):
-        self.money, self.milk, self.water, self.coffe = self.money - 45, self.milk - 0, self.whoter - 250, self.coffe - 24
+        self.money, self.milk, self.water, self.coffe = self.money - 45, self.milk - 0, self.water - 250, self.coffe - 24
 
 auto = Coffe(70, 200, 400, 60)
 while True:
+    x = 0
+    xl = 50
+    xc = 45
+    xe = 35
     user = int(input('''какой вы хотите кофе?
         1)латте
         2)еспрессо
@@ -181,13 +185,70 @@ while True:
 
     if user == 1:
         auto.latte()
-        if input(f'Пожалуйста внесите оплату в размере {auto.latte.lprise()}руб.\n оплата(руб): ') == 42:
-            print('lf ')
+        x = input(f'Пожалуйста внесите оплату в размере 50руб.\n оплата(руб): ')
+        if str(x) == 'выход':
+            continue
+        elif int(x) == xl:
+            print('Вот ваш эспрессо ☕')
+        elif int(x) < xl:
+            xl -= int(x)
+            while xl > 0:
+                print('внесено', x, f'внесите еще {xl}')
+                x = input('внесите остаток: ')
+                if str(x) == 'выход':
+                    break
+                    continue
+                if int(x) > xl:
+                    print(f'вот ваша сдача {-(xl - int(x))}руб')
+                xl -= int(x)
+            if xl <= 0 :
+                print('Вот ваш эспрессо ☕')
+        elif int(x) > xl:
+            print(f'вот ваша сдача {-(xl - int(x))}руб')
     elif user == 2:
         auto.espresso()
+        x = input(f'Пожалуйста внесите оплату в размере 35руб.\n оплата(руб): ')
+        if str(x) == 'выход':
+            continue
+        elif int(x) == xe:
+            print('Вот ваш эспрессо ☕')
+        elif int(x) < xe:
+            xe -= int(x)
+            while xe > 0:
+                print('внесено', x, f'внесите еще {xe}')
+                x = input('внесите остаток: ')
+                if str(x) == 'выход':
+                    break
+                    continue
+                if int(x) > xe:
+                    print(f'вот ваша сдача {-(xe - int(x))}руб')
+                xe -= int(x)
+            if xe <= 0:
+                print('Вот ваш эспрессо ☕')
+        elif int(x) > xe:
+            print(f'вот ваша сдача {-(xe - int(x))}руб')
     elif user == 3:
         auto.cappuccino()
-        print(auto)
+        x = input(f'Пожалуйста внесите оплату в размере 50руб.\n оплата(руб): ')
+        if str(x) == 'выход':
+            continue
+        elif int(x) == xc:
+            print('Вот ваш эспрессо ☕')
+        elif int(x) < xc:
+            xc -= int(x)
+            while xc > 0:
+                print('внесено', x, f'внесите еще {xc}')
+                x = input('внесите остаток: ')
+                if str(x) == 'выход':
+                    break
+                    continue
+                if int(x) > xc:
+                    print(f'вот ваша сдача {-(xc - int(x))}руб')
+                xc -= int(x)
+            if xc <= 0:
+                print('Вот ваш эспрессо ☕')
+        elif int(x) > xc:
+            print(f'вот ваша сдача {-(xc - int(x))}руб')
     elif user == "отчет " or user == "отчет":
         print(auto)
     else:

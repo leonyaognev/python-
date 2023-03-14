@@ -165,7 +165,11 @@ class Coffe:
     def __str__(self):
         return (f'деньги: {self.money}\nмолоко: {self.milk}\nвода: {self.water}\nкоффе: {self.coffe}')
     def latte(self):
-        self.money, self.milk, self.water, self.coffe = self.money - 50, self.milk - 150, self.water - 200, self.coffe - 24
+        self.lprise = 50
+        self.lwater = 200
+        self.lmilk = 150
+        self.lcoffe = 24
+        self.money, self.milk, self.water, self.coffe = self.money - 50, self.milk - 150, self.whoter - 200, self.coffe - 18
     def espresso(self):
         self.money, self.milk, self.water, self.coffe = self.money - 35, self.milk - 0, self.whoter - 50, self.coffe - 18
     def cappuccino(self):
