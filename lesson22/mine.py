@@ -116,8 +116,8 @@ for r, i in enumerate(timerise):
     else:
         x1 += timerise[r]
 
-time = datetime.datetime.now()
-time = str(time.time()).rstrip('1234567890').rstrip('.').replace(':', '')
+time = datetime.datetime.now().time()
+time = str(time).rstrip('1234567890').rstrip('.').replace(':', '')
 
 
 if int(time) > int(x1) and int(time) < int(x):
