@@ -12,7 +12,7 @@ from human import Human
 from house import House
 from Tk import *
 
-chel = Human("джоджо",10000)
+chel = Human("джоджо", 10_000)
 small = House("далеко", 1_000_000_000)
 normal = House("ну типа рядом", 5_000_000_000)
 big = House("вот прям очень близко", 10_000_000_000)
