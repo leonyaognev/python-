@@ -38,10 +38,3 @@
 #     a += a * b
 #     print(f'день {i+2}: {a}')
 
-
-a = input().split(' ')
-for i in a :
-
-
-
-
