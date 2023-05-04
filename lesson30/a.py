@@ -34,7 +34,7 @@ root =Tk()
 ls = [LabelFrame(root, text=const[i][0]) for i in range(7)]
 lt = [(Entry(master=ls[i]), Label(master=ls[i], text=const[i][1]), Entry(master=ls[i]), Button(master=ls[i], text='=', command=const[i][2]), Entry(master=ls[i])) for i in range(7)]
 for i in ls: i.pack()
-  foriin lt:
+for i in lt:
     for j in i:
         j.pack(side=LEFT)
 root.mainloop()
